@@ -1,57 +1,58 @@
-# njx-store — free ecommerce theme for Astro
+# astro-njx-boutique — editorial fashion theme for Astro
 
-A complete, ready-to-ship online store built with **Astro 5 + Tailwind CSS v4**, wired for
-**Shopify** out of the box and deployable to **Cloudflare Pages** (or any static host) in minutes.
+A complete boutique storefront built with **Astro 5 + Tailwind CSS v4**: serif editorial
+typography, full-bleed imagery, oxblood accents — wired for **Shopify** out of the box and
+deployable to **Cloudflare Pages** (or any static host) in minutes.
 
-**Live demo → [astro-njx-store.pages.dev](https://astro-njx-store.pages.dev)**
-Everything in the demo — cart, checkout, search, favorites, dark mode — is this theme running on mock data.
+**Live demo → [astro-njx-boutique.pages.dev](https://astro-njx-boutique.pages.dev)**
+Everything in the demo — bag, checkout, search, favorites, dark mode — is this theme running on mock data.
 
-![njx-store home page](submit-assets/home.png)
+![astro-njx-boutique home page](submit-assets/home.png)
 
 ## What is this?
 
-njx-store is a **static storefront**: Astro renders every page to plain HTML at build time,
-so the site is fast by default and hosting is essentially free. Product data comes from a
-pluggable provider — start with the bundled JSON catalog, then flip one environment variable
-and the same pages build from your **real Shopify store**, with Shopify's hosted checkout
-handling payments.
+astro-njx-boutique is a **static storefront**: Astro renders every page to plain HTML at
+build time, so the site is fast by default and hosting is essentially free. Product data
+comes from a pluggable provider — start with the bundled JSON catalog, then flip one
+environment variable and the same pages build from your **real Shopify store**, with
+Shopify's hosted checkout handling payments.
 
-Use it when you want a fast custom storefront without running a server, paying for a
-heavyweight theme, or building cart logic from scratch.
+Made for small fashion brands, ateliers and boutiques that want an editorial custom
+storefront without running a server.
 
 ## Features
 
-- 🛍 **Full store flow** — home, collections with client-side filters & sorting, product pages
-  with variants, gallery + lightbox, related products
-- 🛒 **Working cart** — persistent (localStorage), quick-add from product cards, quantity
-  controls, line remove, clear all; hands off to Shopify's hosted checkout
-- 🔌 **Two data providers, one switch** — `COMMERCE_PROVIDER=mock` (bundled JSON, no accounts
-  needed) or `shopify` (live products over the Storefront API)
+- 👗 **Full boutique flow** — full-bleed hero, collection shelf, catalog with client-side
+  tag filters (with piece counts) & sorting, product pages with sizes, sticky 3:4 gallery
+  + lightbox, related pieces
+- 🛍 **Working bag** — persistent (localStorage), quick-add from cards, quantity controls,
+  line remove, clear all; hands off to Shopify's hosted checkout
+- 🔌 **Two data providers, one switch** — `COMMERCE_PROVIDER=mock` (bundled JSON, no
+  accounts needed) or `shopify` (live products over the Storefront API)
 - 🔎 **Instant search** — inline index, opens with `/`, zero network requests
-- ❤️ **Favorites** — heart any product, badge counter, dedicated `/favorites` page
+- ❤️ **Favorites** — heart any piece, badge counter, dedicated `/favorites` page
 - 🌗 **Light & dark theme** — one click, no flash on reload
-- 📄 **18 pages total** — about, contacts, FAQ, account (sign in / create account UI),
-  privacy, terms, honest 404
-- 📱 **Responsive** — floating card header/footer, drawer cart & menu on mobile
+- 🤝 **Trust details on every product** — shipping, returns and repairs lines, all from config
 - 📝 **All copy in two constants files** — rebrand every text on the site without touching markup
+- 📄 **20 pages total** — about, contacts, FAQ, account UI, privacy, terms, honest 404
 - ⚡️ **Zero client framework** — a few small vanilla scripts; no React/Vue/hydration cost
 
-| Light | Dark |
+| Catalog | Dark |
 | --- | --- |
-| ![Light theme](submit-assets/collection.png) | ![Dark theme](submit-assets/dark.png) |
+| ![Collection page](submit-assets/collection.png) | ![Dark theme](submit-assets/dark.png) |
 
 ## Quick start
 
 ```bash
-git clone https://github.com/njbSaab/astro-njx-store.git my-store
-cd my-store
+git clone https://github.com/njbSaab/astro-njx-boutique.git my-boutique
+cd my-boutique
 npm install
 cp .env.example .env        # defaults to the mock catalog
 npm run dev                 # http://localhost:4321
 ```
 
-That's it — the store runs on the bundled demo catalog (`src/data/mock-catalog.json`).
-Edit that file to see your own products immediately.
+That's it — the boutique runs on the bundled demo catalog (`src/data/mock-catalog.json`).
+Edit that file to see your own pieces immediately.
 
 ## Connect your Shopify store
 
@@ -66,11 +67,11 @@ PUBLIC_SHOPIFY_DOMAIN=your-store.myshopify.com
 PUBLIC_SHOPIFY_STOREFRONT_TOKEN=xxxxxxxxxxxxxxxx
 ```
 
-5. `npm run build` — the same pages now build from your live catalog, and the cart button
-   creates a real Shopify cart and redirects to your hosted checkout.
+5. `npm run build` — the same pages now build from your live catalog, and the bag creates
+   a real Shopify cart and redirects to your hosted checkout.
 
-The provider interface lives in `src/lib/commerce/` — adding WooCommerce, Medusa or your own
-API means implementing one small TypeScript interface.
+The provider interface lives in `src/lib/commerce/` — adding WooCommerce, Medusa or your
+own API means implementing one small TypeScript interface.
 
 ## Deploy
 
@@ -78,20 +79,20 @@ Any static host works. For Cloudflare Pages:
 
 ```bash
 npm run build
-npx wrangler pages deploy dist --project-name my-store
+npx wrangler pages deploy dist --project-name my-boutique
 ```
 
-Set the same env vars in your host's dashboard for CI builds. The whole store fits
+Set the same env vars in your host's dashboard for CI builds. The whole boutique fits
 comfortably in Cloudflare's free tier.
 
 ## Make it yours
 
-- **All copy in two files** — every piece of text on the site lives in
-  `src/constants/components.ts` (header, footer, drawers, cart, search) and
-  `src/constants/pages.ts` (home, about, FAQ, product page, …). Rebrand the whole store —
-  name, links, announcements, FAQ answers, legal pages — without touching a single component.
+- **All copy in two files** — every piece of text lives in `src/constants/components.ts`
+  (header, footer, drawers, bag, search) and `src/constants/pages.ts` (home, about, FAQ,
+  product page, …). Rebrand the whole boutique without touching a single component.
 - **Brand & colors** — design tokens in `src/styles/global.css` (`@theme` block, dark
-  overrides in `.dark`). Swap the two logo files in `public/logo/`.
+  overrides in `.dark`; radius tokens are flattened for the editorial look — restore them
+  for a softer feel). Fonts load in `src/layouts/Layout.astro`.
 - **Catalog** — `src/data/mock-catalog.json` + photos in `public/products/`, or connect Shopify.
 - **Layout & sections** — plain `.astro` files: header/footer/drawers in
   `src/layouts/Layout.astro`, one file per page in `src/pages/`.
@@ -101,27 +102,27 @@ comfortably in Cloudflare's free tier.
 ```
 src/
 ├── constants/
-│   ├── components.ts           # all copy for the shell: header, footer, cart, search…
+│   ├── components.ts           # all copy for the shell: header, footer, bag, search…
 │   └── pages.ts                # all copy per page: home, about, FAQ, legal…
-├── data/mock-catalog.json      # demo products & collections
-├── layouts/Layout.astro        # header, footer, cart/nav drawers, search
+├── data/mock-catalog.json      # demo pieces & collections
+├── layouts/Layout.astro        # header, footer, bag/nav drawers, search
 ├── components/ProductCard.astro
 ├── lib/
 │   ├── commerce/               # provider interface + mock & shopify implementations
-│   ├── cart.ts                 # persistent cart (nanostores)
+│   ├── cart.ts                 # persistent bag (nanostores)
 │   └── favorites.ts            # persistent favorites
 └── pages/                      # index, collections/, products/, about, faq, …
 ```
 
-## Lite vs Pro
+## Sibling theme & Pro
 
-This is **njx-store Lite** — free, MIT-licensed, complete and production-usable.
-**Pro** (extended sections, more page templates and priority support) is on the way —
-[watch the repo](https://github.com/njbSaab/astro-njx-store) to get notified.
+Prefer a general-goods look? **[astro-njx-store](https://github.com/njbSaab/astro-njx-store)**
+is the same engine with a warm paper-and-pine design. An extended **Pro** version (customer
+accounts, reviews, more sections) is on the way — watch the repo to get notified.
 
 ## Credits
 
 Made by [njX](https://njxui.dev) — also the author of [njx-ui](https://njxui.dev), a
-classless-friendly CSS library for landings. Product photos: [Unsplash](https://unsplash.com).
+classless-friendly CSS library for landings. Photos: [Unsplash](https://unsplash.com).
 
 If this theme saves you time, a ⭐️ on GitHub genuinely helps it reach more people.
