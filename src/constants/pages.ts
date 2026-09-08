@@ -32,6 +32,16 @@ export const HOME = {
       text: 'A loose button or a worn hem — send it back, we mend it free. Clothes should outlive seasons.',
     },
   ],
+  lookbook: {
+    title: 'Worn, not staged',
+    text: 'Pieces from the current run, photographed on the people who sew them.',
+    images: [
+      { src: '/products/wool-wrap-coat.jpg', alt: 'The wrap coat on a stone staircase' },
+      { src: '/products/silk-slip-dress.jpg', alt: 'Silk slip dress in afternoon light' },
+      { src: '/products/ribbed-cardigan.jpg', alt: 'Ribbed cardigan, close on the knit' },
+      { src: '/products/wool-midi-skirt.jpg', alt: 'Wool midi skirt, seated portrait' },
+    ],
+  },
   quote: {
     text: '“The wrap coat has done four winters, two cities and one wedding. It still looks like the first morning.”',
     author: 'Anna K., client since 2021',

@@ -103,27 +103,36 @@ input[type='radio'] {
   }
 }
 
-/* Cart & nav drawers open state */
+/* Cart drawer & fullscreen menu open state */
 body.cart-open,
 body.nav-open {
   overflow: hidden;
 }
-#cart-backdrop,
-#nav-backdrop {
+#cart-backdrop {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
 }
-#cart-drawer,
-#nav-drawer {
+#cart-drawer {
   /* +1.5rem — the card sits at right-4, so it must slide fully off-screen */
   transform: translateX(calc(100% + 1.5rem));
   transition: transform 0.3s cubic-bezier(0.3, 0, 0.2, 1);
 }
-body.cart-open #cart-backdrop,
-body.nav-open #nav-backdrop {
+body.cart-open #cart-backdrop {
   opacity: 1;
   pointer-events: auto;
+}
+/* Fullscreen menu: fades down from the header, editorial takeover */
+#nav-drawer {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-14px);
+  transition: opacity 0.28s ease, transform 0.32s cubic-bezier(0.3, 0, 0.2, 1);
+}
+body.nav-open #nav-drawer {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 body.cart-open #cart-drawer,
 body.nav-open #nav-drawer {
