@@ -16,7 +16,7 @@ export const SITE = {
 
 export const ANNOUNCEMENT = {
   text: 'Complimentary shipping over $150 — every piece cut and sewn in-house',
-  linkLabel: 'Star the theme on GitHub',
+  linkLabel: 'If you star the theme, I’ll be happy ♡',
   linkHref: SITE.repoUrl,
 } as const;
 
@@ -82,7 +82,7 @@ export const FOOTER = {
 export const THANKS_MODAL = {
   emoji: '🌸',
   title: 'Merci — order received!',
-  text: 'This is a demo store, so nothing was charged. If the theme feels right, a star on GitHub takes two seconds and helps a lot.',
+  text: 'This is a demo store, so nothing was charged. If the theme feels right, a star on GitHub would make my day ♡',
   starLabel: '⭐️ Star on GitHub',
   starHref: SITE.repoUrl,
   keepLabel: 'Keep browsing',
