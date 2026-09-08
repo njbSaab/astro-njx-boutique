@@ -54,20 +54,22 @@
   filter: none;
 }
 
-/* Built with: colored stack logos; in dark mode invert only Astro's dark mark —
-   the other logos stay readable on a dark background as-is */
+/* Built with: stack logos rendered monochrome — editorial footers stay quiet */
 .tech-row img {
-  transition: opacity 0.15s ease;
-  opacity: 0.9;
+  filter: grayscale(1) contrast(0.85);
+  opacity: 0.6;
+  transition: opacity 0.15s ease, filter 0.15s ease;
 }
 .tech-row img:hover {
-  opacity: 1;
+  filter: grayscale(1) contrast(1);
+  opacity: 0.9;
 }
-.dark .tech-row img[alt="Astro"],
-.dark .tech-row img[alt="Cloudflare"],
-.dark .tech-row img[alt="Node.js"] {
-  /* dark marks → light; hue-rotate restores the brand colors' native hue */
-  filter: invert(1) hue-rotate(180deg);
+.dark .tech-row img {
+  /* dark marks → light gray on the dark footer */
+  filter: grayscale(1) invert(1) contrast(0.8);
+}
+.dark .tech-row img:hover {
+  filter: grayscale(1) invert(1) contrast(1);
 }
 
 /* Active favorite heart */

@@ -113,7 +113,7 @@ const searchIndex = JSON.stringify(
           </svg>
           <span
             id="cart-count"
-            class="absolute -right-1.5 -top-1.5 hidden rounded-full bg-brand px-1.5 py-0.5 text-[10px] font-semibold leading-none text-white"
+            class="absolute -right-0.5 -top-0.5 hidden rounded-full bg-brand px-1.5 py-0.5 text-[10px] font-semibold leading-none text-white"
           ></span>
         </button>
         <button id="nav-button" class="p-2.5 text-muted hover:text-ink" aria-label={HEADER.aria.menu} aria-expanded="false">
@@ -126,7 +126,7 @@ const searchIndex = JSON.stringify(
       <!-- collections nav: hairline strip under the wordmark -->
       <div class="hidden justify-center gap-8 border-t border-line text-[14px] tracking-wide text-muted sm:flex">
         {HEADER.navLinks.map((l) => (
-          <a href={l.href} class={navCls(l.href, "py-3 hover:text-ink hover:underline underline-offset-[14px] decoration-brand", "text-ink underline underline-offset-[14px] decoration-brand")}>{l.label}</a>
+          <a href={l.href} class={navCls(l.href, "py-3 hover:text-ink hover:underline underline-offset-[15px] decoration-brand", "text-ink underline underline-offset-[15px] decoration-brand")}>{l.label}</a>
         ))}
       </div>
       <!-- search panel -->

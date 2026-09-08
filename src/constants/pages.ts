@@ -8,14 +8,32 @@ export const HOME = {
   meta: {
     // empty = defaults from SITE (Layout fills them in)
   },
-  hero: {
-    title: 'Clothes for slow seasons.',
-    text: 'Wool, silk and heavy linen, cut in small runs and sewn to be worn for a decade. No drops, no noise — a wardrobe that waits for you.',
-    ctaPrimary: { label: 'Shop new in', href: '/collections/dresses' },
-    ctaSecondary: { label: 'The knitwear', href: '/collections/knitwear' },
-    note: 'Cut and sewn in-house. Free repairs for life.',
-    image: { src: '/products/hero.jpg', alt: 'A rail of ivory and sand garments on wooden hangers' },
-  },
+  heroSlides: [
+    {
+      title: 'Clothes for slow seasons.',
+      text: 'Wool, silk and heavy linen, cut in small runs and sewn to be worn for a decade. No drops, no noise — a wardrobe that waits for you.',
+      ctaPrimary: { label: 'Shop new in', href: '/collections/dresses' },
+      ctaSecondary: { label: 'The knitwear', href: '/collections/knitwear' },
+      note: 'Cut and sewn in-house. Free repairs for life.',
+      image: { src: '/products/hero.jpg', alt: 'A rail of ivory and sand garments on wooden hangers' },
+    },
+    {
+      title: 'The coat you plan outfits around.',
+      text: 'Double-faced Italian wool, tied at the waist, cut for a decade of winters. The outerwear run is back — numbered, as always.',
+      ctaPrimary: { label: 'Shop outerwear', href: '/collections/outerwear' },
+      ctaSecondary: { label: 'The wrap coat', href: '/products/wool-wrap-coat' },
+      note: 'Small runs. When the fabric ends, the run ends.',
+      image: { src: '/products/hero-2.jpg', alt: 'A model in an autumn coat, photographed in soft light' },
+    },
+    {
+      title: 'Knit dense enough to keep promises.',
+      text: 'Merino and baby alpaca, knitted to hold their collar and their shape. Layers that breathe on their own and outlive trends by ignoring them.',
+      ctaPrimary: { label: 'Shop knitwear', href: '/collections/knitwear' },
+      ctaSecondary: { label: 'The accessories', href: '/collections/accessories' },
+      note: 'Free repairs for life on every piece we make.',
+      image: { src: '/products/hero-3.jpg', alt: 'A boutique rail of garments in warm light' },
+    },
+  ],
   collections: { title: 'The collections' },
   products: { title: 'Everything we cut', countLabel: 'pieces' },
   values: [

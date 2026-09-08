@@ -17,26 +17,47 @@ const shelfImages: Record<string, string> = {
 ---
 
 <Layout>
-  <!-- Hero: full-bleed editorial -->
-  <section class="relative">
-    <img src={T.hero.image.src} alt={T.hero.image.alt} class="h-[62vh] min-h-[420px] w-full object-cover md:h-[74vh]" />
-    <div class="absolute inset-0 bg-gradient-to-t from-ink/65 via-ink/25 to-ink/5"></div>
-    <div class="absolute inset-x-0 bottom-0">
-      <div class="mx-auto max-w-6xl px-5 pb-10 md:pb-14">
-        <h1 class="max-w-[16ch] font-display text-[clamp(40px,6.5vw,80px)] font-medium leading-[1.02] text-white">
-          {T.hero.title}
-        </h1>
-        <p class="mt-4 max-w-[46ch] text-[16px] leading-relaxed text-white/85">{T.hero.text}</p>
-        <div class="mt-7 flex flex-wrap items-center gap-3">
-          <a href={T.hero.ctaPrimary.href} class="bg-paper px-7 py-3.5 text-[14px] font-semibold text-ink hover:bg-white">
-            {T.hero.ctaPrimary.label}
-          </a>
-          <a href={T.hero.ctaSecondary.href} class="border border-white/60 px-7 py-3.5 text-[14px] font-semibold text-white hover:bg-white/10">
-            {T.hero.ctaSecondary.label}
-          </a>
-          <span class="ml-1 hidden text-[13px] text-white/70 sm:inline">{T.hero.note}</span>
+  <!-- Hero: full-bleed editorial slider (vanilla JS, no libraries) -->
+  <section class="relative h-[62vh] min-h-[420px] overflow-hidden md:h-[74vh]" data-hero-slider>
+    {T.heroSlides.map((s, i) => (
+      <div
+        data-hero-slide
+        class:list={[
+          'absolute inset-0 transition-opacity duration-700',
+          i === 0 ? 'opacity-100' : 'pointer-events-none opacity-0',
+        ]}
+      >
+        <img src={s.image.src} alt={s.image.alt} class="h-full w-full object-cover" loading={i === 0 ? 'eager' : 'lazy'} />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/65 via-ink/25 to-ink/5"></div>
+        <div class="absolute inset-x-0 bottom-0">
+          <div class="mx-auto max-w-6xl px-5 pb-14 md:pb-16">
+            {i === 0
+              ? <h1 class="max-w-[16ch] font-display text-[clamp(40px,6.5vw,80px)] font-medium leading-[1.02] text-white">{s.title}</h1>
+              : <p class="max-w-[16ch] font-display text-[clamp(40px,6.5vw,80px)] font-medium leading-[1.02] text-white">{s.title}</p>}
+            <p class="mt-4 max-w-[46ch] text-[16px] leading-relaxed text-white/85">{s.text}</p>
+            <div class="mt-7 flex flex-wrap items-center gap-3">
+              <a href={s.ctaPrimary.href} class="bg-paper px-7 py-3.5 text-[14px] font-semibold text-ink hover:bg-white">
+                {s.ctaPrimary.label}
+              </a>
+              <a href={s.ctaSecondary.href} class="border border-white/60 px-7 py-3.5 text-[14px] font-semibold text-white hover:bg-white/10">
+                {s.ctaSecondary.label}
+              </a>
+              <span class="ml-1 hidden text-[13px] text-white/70 sm:inline">{s.note}</span>
+            </div>
+          </div>
         </div>
       </div>
+    ))}
+    <div class="absolute bottom-5 right-5 z-10 flex items-center gap-2 md:bottom-7 md:right-8">
+      {T.heroSlides.map((_, i) => (
+        <button
+          type="button"
+          data-hero-dot={i}
+          aria-label={`Show slide ${i + 1}`}
+          aria-pressed={i === 0}
+          class="h-[3px] w-7 bg-white/40 transition aria-pressed:bg-white"
+        ></button>
+      ))}
     </div>
   </section>
 
@@ -152,6 +173,38 @@ const shelfImages: Record<string, string> = {
   </section>
 
   <script>
+    // ── Hero slider: fade between slides, auto-advance, pause on hover ──
+    const slider = document.querySelector<HTMLElement>('[data-hero-slider]');
+    if (slider) {
+      const slides = [...slider.querySelectorAll<HTMLElement>('[data-hero-slide]')];
+      const dots = [...slider.querySelectorAll<HTMLElement>('[data-hero-dot]')];
+      let current = 0;
+      let timer: ReturnType<typeof setInterval>;
+
+      function show(i: number) {
+        current = (i + slides.length) % slides.length;
+        slides.forEach((s, n) => {
+          s.classList.toggle('opacity-100', n === current);
+          s.classList.toggle('opacity-0', n !== current);
+          s.classList.toggle('pointer-events-none', n !== current);
+        });
+        dots.forEach((d, n) => d.setAttribute('aria-pressed', String(n === current)));
+      }
+      function play() {
+        timer = setInterval(() => show(current + 1), 6000);
+      }
+      dots.forEach((d, n) =>
+        d.addEventListener('click', () => {
+          clearInterval(timer);
+          show(n);
+          play();
+        }),
+      );
+      slider.addEventListener('mouseenter', () => clearInterval(timer));
+      slider.addEventListener('mouseleave', play);
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) play();
+    }
+
     document.querySelectorAll<HTMLButtonElement>('[data-copy-env]').forEach((btn) => {
       btn.addEventListener('click', async () => {
         await navigator.clipboard.writeText(btn.dataset.copyEnv!);
