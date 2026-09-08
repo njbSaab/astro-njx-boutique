@@ -191,7 +191,7 @@ const shelfImages: Record<string, string> = {
         dots.forEach((d, n) => d.setAttribute('aria-pressed', String(n === current)));
       }
       function play() {
-        timer = setInterval(() => show(current + 1), 6000);
+        timer = setInterval(() => show(current + 1), 5000);
       }
       dots.forEach((d, n) =>
         d.addEventListener('click', () => {
