@@ -2,37 +2,43 @@
   "collections": [
     {
       "id": "c1",
-      "handle": "apparel",
-      "title": "Apparel",
-      "description": "Tees, hoodies and caps for people who ship."
+      "handle": "dresses",
+      "title": "Dresses & Skirts",
+      "description": "Bias-cut silk, heavy linen, brushed wool — pieces that move first."
     },
     {
       "id": "c2",
-      "handle": "desk",
-      "title": "Desk & Setup",
-      "description": "Make the place you sit 9 hours a day feel right."
+      "handle": "knitwear",
+      "title": "Knitwear",
+      "description": "Merino and alpaca, knitted to keep their shape and their promises."
     },
     {
       "id": "c3",
-      "handle": "coffee",
-      "title": "Coffee",
-      "description": "Fuel. Freshly roasted, honestly priced."
+      "handle": "outerwear",
+      "title": "Outerwear",
+      "description": "The layer everyone sees. Cut clean, made to be worn for a decade."
+    },
+    {
+      "id": "c4",
+      "handle": "accessories",
+      "title": "Accessories",
+      "description": "Leather and alpaca details that finish the outfit quietly."
     }
   ],
   "products": [
     {
       "id": "p1",
-      "handle": "ship-it-tee",
-      "title": "Ship It Tee",
-      "description": "Heavyweight 220 gsm cotton tee with a small embroidered rocket. Pre-shrunk, boxy fit, no cracking prints — the logo is stitched, not slapped on.",
+      "handle": "wool-wrap-coat",
+      "title": "The Wrap Coat",
+      "description": "Double-faced Italian wool, no lining to hide behind. Ties at the waist, falls below the knee, shoulders cut for a sweater underneath. The coat you plan outfits around.",
       "images": [
         {
-          "src": "/products/ship-it-tee.jpg",
-          "alt": "Ship It Tee — black heavyweight t-shirt with embroidered rocket"
+          "src": "/products/wool-wrap-coat.jpg",
+          "alt": "The Wrap Coat"
         }
       ],
       "price": {
-        "amount": 32,
+        "amount": 240,
         "currency": "USD"
       },
       "variants": [
@@ -40,7 +46,7 @@
           "id": "p1v1",
           "title": "S",
           "price": {
-            "amount": 32,
+            "amount": 240,
             "currency": "USD"
           },
           "available": true
@@ -49,7 +55,7 @@
           "id": "p1v2",
           "title": "M",
           "price": {
-            "amount": 32,
+            "amount": 240,
             "currency": "USD"
           },
           "available": true
@@ -58,46 +64,37 @@
           "id": "p1v3",
           "title": "L",
           "price": {
-            "amount": 32,
+            "amount": 240,
             "currency": "USD"
           },
           "available": true
-        },
-        {
-          "id": "p1v4",
-          "title": "XL",
-          "price": {
-            "amount": 32,
-            "currency": "USD"
-          },
-          "available": false
         }
       ],
       "tags": [
-        "cotton",
-        "embroidered"
+        "wool",
+        "tailored"
       ],
       "collectionHandles": [
-        "apparel"
+        "outerwear"
       ]
     },
     {
       "id": "p2",
-      "handle": "deep-work-hoodie",
-      "title": "Deep Work Hoodie",
-      "description": "The hoodie you reach for at 6am and forget to take off. Brushed fleece inside, double-lined hood, hidden zip pocket for keys.",
+      "handle": "belted-trench",
+      "title": "Belted Trench",
+      "description": "Bone-dry cotton gabardine with a matte finish. Storm flap, horn buttons, a belt you will actually tie. Reads polished over a dress and unbothered over denim.",
       "images": [
         {
-          "src": "/products/deep-work-hoodie.jpg",
-          "alt": "Deep Work Hoodie — charcoal hoodie"
+          "src": "/products/belted-trench.jpg",
+          "alt": "Belted Trench"
         }
       ],
       "price": {
-        "amount": 64,
+        "amount": 210,
         "currency": "USD"
       },
       "compareAtPrice": {
-        "amount": 79,
+        "amount": 260,
         "currency": "USD"
       },
       "variants": [
@@ -105,7 +102,7 @@
           "id": "p2v1",
           "title": "S",
           "price": {
-            "amount": 64,
+            "amount": 210,
             "currency": "USD"
           },
           "available": true
@@ -114,7 +111,7 @@
           "id": "p2v2",
           "title": "M",
           "price": {
-            "amount": 64,
+            "amount": 210,
             "currency": "USD"
           },
           "available": true
@@ -123,155 +120,413 @@
           "id": "p2v3",
           "title": "L",
           "price": {
-            "amount": 64,
+            "amount": 210,
             "currency": "USD"
           },
           "available": true
         }
       ],
       "tags": [
-        "fleece",
+        "cotton",
         "sale"
       ],
       "collectionHandles": [
-        "apparel"
+        "outerwear"
       ]
     },
     {
       "id": "p3",
-      "handle": "focus-cap",
-      "title": "Focus Cap",
-      "description": "Low-profile unstructured cap. One size, brass buckle, no loud logos — just a tiny stitched cursor.",
+      "handle": "linen-shift-dress",
+      "title": "Linen Shift Dress",
+      "description": "Heavy Belgian linen that holds its shape and softens by the wash. Pockets set deep enough to trust. The dress for every day you refuse to think about clothes.",
       "images": [
         {
-          "src": "/products/focus-cap.jpg",
-          "alt": "Focus Cap — navy dad cap"
+          "src": "/products/linen-shift-dress.jpg",
+          "alt": "Linen Shift Dress"
         }
       ],
       "price": {
-        "amount": 24,
+        "amount": 120,
         "currency": "USD"
       },
       "variants": [
         {
           "id": "p3v1",
-          "title": "One size",
+          "title": "XS",
           "price": {
-            "amount": 24,
+            "amount": 120,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p3v2",
+          "title": "S",
+          "price": {
+            "amount": 120,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p3v3",
+          "title": "M",
+          "price": {
+            "amount": 120,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p3v4",
+          "title": "L",
+          "price": {
+            "amount": 120,
             "currency": "USD"
           },
           "available": true
         }
       ],
       "tags": [
-        "cap"
+        "linen",
+        "pockets"
       ],
       "collectionHandles": [
-        "apparel"
+        "dresses"
       ]
     },
     {
       "id": "p4",
-      "handle": "walnut-laptop-stand",
-      "title": "Walnut Laptop Stand",
-      "description": "Solid walnut, cork-lined, raises the screen 14 cm to eye level. Ships flat, assembles without tools.",
+      "handle": "silk-slip-dress",
+      "title": "Silk Slip Dress",
+      "description": "Sand-washed 19-momme silk, bias-cut so it moves before you do. Adjustable straps, midi length. Wear it to dinner now and under the merino crew in November.",
       "images": [
         {
-          "src": "/products/walnut-laptop-stand.jpg",
-          "alt": "Walnut Laptop Stand with a laptop on top"
-        },
-        {
-          "src": "/products/hero.jpg",
-          "alt": "Walnut stand in a full desk setup"
+          "src": "/products/silk-slip-dress.jpg",
+          "alt": "Silk Slip Dress"
         }
       ],
       "price": {
-        "amount": 89,
+        "amount": 150,
+        "currency": "USD"
+      },
+      "compareAtPrice": {
+        "amount": 180,
         "currency": "USD"
       },
       "variants": [
         {
           "id": "p4v1",
-          "title": "Default",
+          "title": "XS",
           "price": {
-            "amount": 89,
+            "amount": 150,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p4v2",
+          "title": "S",
+          "price": {
+            "amount": 150,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p4v3",
+          "title": "M",
+          "price": {
+            "amount": 150,
             "currency": "USD"
           },
           "available": true
         }
       ],
       "tags": [
-        "wood",
-        "desk"
+        "silk",
+        "evening",
+        "sale"
       ],
       "collectionHandles": [
-        "desk"
+        "dresses"
       ]
     },
     {
       "id": "p5",
-      "handle": "felt-desk-mat",
-      "title": "Felt Desk Mat",
-      "description": "Merino felt on top, natural cork underneath. 80×30 cm — fits a keyboard, a mouse and a coffee you promised yourself you'd finish.",
+      "handle": "wool-midi-skirt",
+      "title": "Wool Midi Skirt",
+      "description": "A-line in brushed wool flannel with a clean waistband and a quiet side zip. Swings when you walk, behaves when you sit.",
       "images": [
         {
-          "src": "/products/felt-desk-mat.jpg",
-          "alt": "Felt Desk Mat in grey"
+          "src": "/products/wool-midi-skirt.jpg",
+          "alt": "Wool Midi Skirt"
         }
       ],
       "price": {
-        "amount": 42,
+        "amount": 98,
         "currency": "USD"
       },
       "variants": [
         {
           "id": "p5v1",
-          "title": "Grey",
+          "title": "XS",
           "price": {
-            "amount": 42,
+            "amount": 98,
             "currency": "USD"
           },
           "available": true
         },
         {
           "id": "p5v2",
-          "title": "Camel",
+          "title": "S",
           "price": {
-            "amount": 42,
+            "amount": 98,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p5v3",
+          "title": "M",
+          "price": {
+            "amount": 98,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p5v4",
+          "title": "L",
+          "price": {
+            "amount": 98,
             "currency": "USD"
           },
           "available": true
         }
       ],
       "tags": [
-        "felt",
-        "desk"
+        "wool",
+        "tailored"
       ],
       "collectionHandles": [
-        "desk"
+        "dresses"
       ]
     },
     {
       "id": "p6",
-      "handle": "cable-taco-set",
-      "title": "Cable Taco Set",
-      "description": "Six leather cable wraps with snap buttons. Your bag stops being a nest of chargers.",
+      "handle": "merino-crew",
+      "title": "Merino Crew",
+      "description": "Extra-fine merino, knitted dense enough to keep its collar. Layers flat under coats, breathes on its own. The sweater that outlives trends by ignoring them.",
       "images": [
         {
-          "src": "/products/cable-taco-set.jpg",
-          "alt": "Set of six leather cable organizers"
+          "src": "/products/merino-crew.jpg",
+          "alt": "Merino Crew"
         }
       ],
       "price": {
-        "amount": 19,
+        "amount": 95,
         "currency": "USD"
       },
       "variants": [
         {
           "id": "p6v1",
-          "title": "Default",
+          "title": "S",
           "price": {
-            "amount": 19,
+            "amount": 95,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p6v2",
+          "title": "M",
+          "price": {
+            "amount": 95,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p6v3",
+          "title": "L",
+          "price": {
+            "amount": 95,
+            "currency": "USD"
+          },
+          "available": true
+        }
+      ],
+      "tags": [
+        "merino",
+        "layering"
+      ],
+      "collectionHandles": [
+        "knitwear"
+      ]
+    },
+    {
+      "id": "p7",
+      "handle": "ribbed-cardigan",
+      "title": "Ribbed Cardigan",
+      "description": "Chunky rib in a wool-alpaca blend with corozo buttons. Falls straight, sits open or closed. Somewhere between a cardigan and a soft jacket.",
+      "images": [
+        {
+          "src": "/products/ribbed-cardigan.jpg",
+          "alt": "Ribbed Cardigan"
+        }
+      ],
+      "price": {
+        "amount": 110,
+        "currency": "USD"
+      },
+      "compareAtPrice": {
+        "amount": 135,
+        "currency": "USD"
+      },
+      "variants": [
+        {
+          "id": "p7v1",
+          "title": "S",
+          "price": {
+            "amount": 110,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p7v2",
+          "title": "M",
+          "price": {
+            "amount": 110,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p7v3",
+          "title": "L",
+          "price": {
+            "amount": 110,
+            "currency": "USD"
+          },
+          "available": true
+        }
+      ],
+      "tags": [
+        "alpaca",
+        "sale"
+      ],
+      "collectionHandles": [
+        "knitwear"
+      ]
+    },
+    {
+      "id": "p8",
+      "handle": "canvas-tote",
+      "title": "Canvas Tote",
+      "description": "Twelve-ounce cotton canvas with reinforced handles and a flat bottom that stands on its own. Fits a 13-inch laptop, a paperback and the fruit you bought on the way. One inner pocket, no logos.",
+      "images": [
+        {
+          "src": "/products/canvas-tote.jpg",
+          "alt": "Canvas Tote"
+        }
+      ],
+      "price": {
+        "amount": 160,
+        "currency": "USD"
+      },
+      "variants": [
+        {
+          "id": "p8v1",
+          "title": "One size",
+          "price": {
+            "amount": 160,
+            "currency": "USD"
+          },
+          "available": true
+        }
+      ],
+      "tags": [
+        "canvas"
+      ],
+      "collectionHandles": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "p9",
+      "handle": "alpaca-scarf",
+      "title": "Alpaca Scarf",
+      "description": "Baby alpaca, woven wide enough to double as a shawl on cold trains. Featherweight, warmer than it admits.",
+      "images": [
+        {
+          "src": "/products/alpaca-scarf.jpg",
+          "alt": "Alpaca Scarf"
+        }
+      ],
+      "price": {
+        "amount": 55,
+        "currency": "USD"
+      },
+      "variants": [
+        {
+          "id": "p9v1",
+          "title": "One size",
+          "price": {
+            "amount": 55,
+            "currency": "USD"
+          },
+          "available": true
+        }
+      ],
+      "tags": [
+        "alpaca",
+        "gift"
+      ],
+      "collectionHandles": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "p10",
+      "handle": "leather-belt",
+      "title": "Slim Leather Belt",
+      "description": "Full-grain bridle leather with a solid brass buckle, cut slim for dresses and high waists. Darkens beautifully with wear.",
+      "images": [
+        {
+          "src": "/products/leather-belt.jpg",
+          "alt": "Slim Leather Belt"
+        }
+      ],
+      "price": {
+        "amount": 45,
+        "currency": "USD"
+      },
+      "variants": [
+        {
+          "id": "p10v1",
+          "title": "S",
+          "price": {
+            "amount": 45,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p10v2",
+          "title": "M",
+          "price": {
+            "amount": 45,
+            "currency": "USD"
+          },
+          "available": true
+        },
+        {
+          "id": "p10v3",
+          "title": "L",
+          "price": {
+            "amount": 45,
             "currency": "USD"
           },
           "available": true
@@ -279,107 +534,10 @@
       ],
       "tags": [
         "leather",
-        "desk"
+        "gift"
       ],
       "collectionHandles": [
-        "desk"
-      ]
-    },
-    {
-      "id": "p7",
-      "handle": "midnight-roast",
-      "title": "Midnight Roast",
-      "description": "Dark roast for long nights: chocolate, hazelnut, zero sourness. Whole beans, 340 g, roasted the week we ship it.",
-      "images": [
-        {
-          "src": "/products/midnight-roast.jpg",
-          "alt": "Midnight Roast coffee bag"
-        },
-        {
-          "src": "/products/morning-blend.jpg",
-          "alt": "Midnight Roast, brewed"
-        }
-      ],
-      "price": {
-        "amount": 18,
-        "currency": "USD"
-      },
-      "variants": [
-        {
-          "id": "p7v1",
-          "title": "Whole bean",
-          "price": {
-            "amount": 18,
-            "currency": "USD"
-          },
-          "available": true
-        },
-        {
-          "id": "p7v2",
-          "title": "Ground",
-          "price": {
-            "amount": 18,
-            "currency": "USD"
-          },
-          "available": true
-        }
-      ],
-      "tags": [
-        "dark-roast"
-      ],
-      "collectionHandles": [
-        "coffee"
-      ]
-    },
-    {
-      "id": "p8",
-      "handle": "morning-blend",
-      "title": "Morning Blend",
-      "description": "Bright and easy: citrus up front, caramel finish. The one you drink before the standup.",
-      "images": [
-        {
-          "src": "/products/morning-blend.jpg",
-          "alt": "Morning Blend coffee bag"
-        },
-        {
-          "src": "/products/midnight-roast.jpg",
-          "alt": "Morning Blend — whole beans"
-        }
-      ],
-      "price": {
-        "amount": 16,
-        "currency": "USD"
-      },
-      "compareAtPrice": {
-        "amount": 20,
-        "currency": "USD"
-      },
-      "variants": [
-        {
-          "id": "p8v1",
-          "title": "Whole bean",
-          "price": {
-            "amount": 16,
-            "currency": "USD"
-          },
-          "available": true
-        },
-        {
-          "id": "p8v2",
-          "title": "Ground",
-          "price": {
-            "amount": 16,
-            "currency": "USD"
-          },
-          "available": true
-        }
-      ],
-      "tags": [
-        "light-roast",
-        "sale"
-      ],
-      "collectionHandles": [
-        "coffee"
+        "accessories"
       ]
     }
   ]

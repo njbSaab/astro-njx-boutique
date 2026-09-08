@@ -36,7 +36,7 @@ import { ACCOUNT as T } from '../constants/pages';
             name="name"
             autocomplete="name"
             placeholder={T.fields.namePlaceholder}
-            class="mt-1.5 w-full rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-pine"
+            class="mt-1.5 w-full rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-brand"
           />
         </label>
         <label class="block">
@@ -47,7 +47,7 @@ import { ACCOUNT as T } from '../constants/pages';
             required
             autocomplete="email"
             placeholder={T.fields.emailPlaceholder}
-            class="mt-1.5 w-full rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-pine"
+            class="mt-1.5 w-full rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-brand"
           />
         </label>
         <label class="block">
@@ -59,20 +59,20 @@ import { ACCOUNT as T } from '../constants/pages';
             minlength="8"
             autocomplete="current-password"
             placeholder={T.fields.passwordPlaceholder}
-            class="mt-1.5 w-full rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-pine"
+            class="mt-1.5 w-full rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-brand"
           />
         </label>
         <div class="flex items-center justify-between text-[13px]">
           <label class="flex items-center gap-2 text-muted">
-            <input type="checkbox" name="remember" class="h-4 w-4 accent-pine" />
+            <input type="checkbox" name="remember" class="h-4 w-4 accent-brand" />
             {T.fields.remember}
           </label>
           <a data-field="forgot" href="#" class="text-muted underline underline-offset-2 hover:text-ink">{T.fields.forgot}</a>
         </div>
-        <button type="submit" data-auth-submit class="w-full rounded-md bg-pine py-3.5 text-[15px] font-semibold text-white hover:bg-pine-deep">
+        <button type="submit" data-auth-submit class="w-full rounded-md bg-brand py-3.5 text-[15px] font-semibold text-white hover:bg-brand-deep">
           {T.login.submit}
         </button>
-        <p data-auth-note class="hidden rounded-md bg-pine-soft px-4 py-3 text-center text-[13px] leading-relaxed"></p>
+        <p data-auth-note class="hidden rounded-md bg-brand-soft px-4 py-3 text-center text-[13px] leading-relaxed"></p>
       </form>
     </div>
     <p class="mt-5 text-center text-[13px] text-muted">{T.pageNote}</p>

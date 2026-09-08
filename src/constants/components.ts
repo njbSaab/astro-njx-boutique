@@ -4,27 +4,28 @@
  */
 
 export const SITE = {
-  name: 'njx-shop',
-  defaultTitle: 'njX Shop — good gear for long builds',
+  name: 'Maren',
+  defaultTitle: 'Maren — clothes for slow seasons',
   defaultDescription:
-    'Demo storefront for astro-njx-store: apparel, desk goods and coffee. Astro + Tailwind, mock data out of the box, Shopify with two env vars.',
-  logoDark: '/logo/njx-shop-dark.png', // dark mark — shown on the light theme
-  logoLight: '/logo/njx-shop-light.png', // light mark — shown on the dark theme
-  repoUrl: 'https://github.com/njbSaab/astro-njx-store',
+    'Demo storefront for astro-njx-boutique: an editorial fashion theme for Astro. Mock data out of the box, Shopify with two env vars.',
+  logoDark: '/logo/maren-dark.svg', // dark mark — shown on the light theme
+  logoLight: '/logo/maren-light.svg', // light mark — shown on the dark theme
+  repoUrl: 'https://github.com/njbSaab/astro-njx-boutique',
   authorUrl: 'https://njxui.dev',
 } as const;
 
 export const ANNOUNCEMENT = {
-  text: 'Free shipping on orders over $75 — roasted and packed every Monday',
-  linkLabel: 'Please ⭐️ on GitHub',
+  text: 'Complimentary shipping over $150 — every piece cut and sewn in-house',
+  linkLabel: 'Star the theme on GitHub',
   linkHref: SITE.repoUrl,
 } as const;
 
 export const HEADER = {
   navLinks: [
-    { label: 'Apparel', href: '/collections/apparel' },
-    { label: 'Desk', href: '/collections/desk' },
-    { label: 'Coffee', href: '/collections/coffee' },
+    { label: 'Dresses', href: '/collections/dresses' },
+    { label: 'Knitwear', href: '/collections/knitwear' },
+    { label: 'Outerwear', href: '/collections/outerwear' },
+    { label: 'Accessories', href: '/collections/accessories' },
   ],
   aria: {
     search: 'Search',
@@ -37,25 +38,26 @@ export const HEADER = {
 } as const;
 
 export const SEARCH = {
-  placeholder: 'Search products…',
+  placeholder: 'Search the collection…',
   escHint: 'Esc',
-  emptyText: 'Nothing found — try “hoodie”, “walnut” or “coffee”.',
+  emptyText: 'Nothing found — try “wool”, “silk” or “linen”.',
 } as const;
 
 export const FOOTER = {
   tagline:
-    'Good gear for long builds. A demo store for the astro-njx-store theme — every product here is fictional, the checkout is real.',
+    'Clothes for slow seasons. A demo store for the astro-njx-boutique theme — every garment here is fictional, the checkout is real.',
   columns: [
     {
       title: 'Shop',
       links: [
-        { label: 'Apparel', href: '/collections/apparel' },
-        { label: 'Desk & setup', href: '/collections/desk' },
-        { label: 'Coffee', href: '/collections/coffee' },
+        { label: 'Dresses & skirts', href: '/collections/dresses' },
+        { label: 'Knitwear', href: '/collections/knitwear' },
+        { label: 'Outerwear', href: '/collections/outerwear' },
+        { label: 'Accessories', href: '/collections/accessories' },
       ],
     },
     {
-      title: 'Pages',
+      title: 'Maison',
       links: [
         { label: 'About', href: '/about' },
         { label: 'Contacts', href: '/contacts' },
@@ -78,9 +80,9 @@ export const FOOTER = {
 } as const;
 
 export const THANKS_MODAL = {
-  emoji: '🎉',
-  title: 'Thanks for the order!',
-  text: 'This is a demo store, so nothing was charged. If you like the theme, a star takes two seconds and helps a lot.',
+  emoji: '🌸',
+  title: 'Merci — order received!',
+  text: 'This is a demo store, so nothing was charged. If the theme feels right, a star on GitHub takes two seconds and helps a lot.',
   starLabel: '⭐️ Star on GitHub',
   starHref: SITE.repoUrl,
   keepLabel: 'Keep browsing',
@@ -89,12 +91,12 @@ export const THANKS_MODAL = {
 } as const;
 
 export const CART = {
-  ariaDrawer: 'Shopping cart',
+  ariaDrawer: 'Shopping bag',
   clearLabel: 'Clear all',
-  ariaClear: 'Clear cart',
-  ariaClose: 'Close cart',
-  emptyLine1: 'Your cart is empty.',
-  emptyLine2: 'Everything ships free over $75.',
+  ariaClear: 'Clear bag',
+  ariaClose: 'Close bag',
+  emptyLine1: 'Your bag is empty.',
+  emptyLine2: 'Shipping is on us over $150.',
   subtotalLabel: 'Subtotal',
   shippingNote: 'Shipping and taxes calculated at checkout.',
   checkoutLabel: 'Checkout',
@@ -107,9 +109,10 @@ export const NAV_DRAWER = {
   ariaClose: 'Close menu',
   home: { label: 'Home', href: '/' },
   collections: [
-    { label: 'Apparel', href: '/collections/apparel' },
-    { label: 'Desk & setup', href: '/collections/desk' },
-    { label: 'Coffee', href: '/collections/coffee' },
+    { label: 'Dresses & skirts', href: '/collections/dresses' },
+    { label: 'Knitwear', href: '/collections/knitwear' },
+    { label: 'Outerwear', href: '/collections/outerwear' },
+    { label: 'Accessories', href: '/collections/accessories' },
   ],
   pages: [
     { label: 'About', href: '/about' },
@@ -127,7 +130,7 @@ export const NAV_DRAWER = {
 
 export const PRODUCT_CARD = {
   saleBadge: 'Sale',
-  addToCart: 'Add to cart',
+  addToCart: 'Add to bag',
   ariaFav: (title: string) => `Add ${title} to favorites`,
-  ariaAdd: (title: string) => `Add ${title} to cart`,
+  ariaAdd: (title: string) => `Add ${title} to bag`,
 } as const;

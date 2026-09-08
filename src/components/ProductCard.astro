@@ -23,7 +23,7 @@ const cartLine = JSON.stringify({
 
 <a href={`/products/${product.handle}`} class="group block rounded-lg transition hover:bg-tile/60">
   <div class="relative overflow-hidden rounded-lg bg-tile">
-    <div class="aspect-square">
+    <div class="aspect-[3/4]">
       {img && (
         <img
           src={img.src}
@@ -42,7 +42,7 @@ const cartLine = JSON.stringify({
       type="button"
       data-fav-toggle={product.handle}
       onclick="event.preventDefault()"
-      class="absolute right-3 top-3 rounded-md bg-paper/85 p-2 text-ink shadow-sm backdrop-blur transition hover:text-pine"
+      class="absolute right-3 top-3 rounded-md bg-paper/85 p-2 text-ink shadow-sm backdrop-blur transition hover:text-brand"
       aria-label={T.ariaFav(product.title)}
     >
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
@@ -54,17 +54,17 @@ const cartLine = JSON.stringify({
       data-cart-line={cartLine}
       data-quick-add
       onclick="event.preventDefault()"
-      class="absolute inset-x-3 bottom-3 translate-y-2 rounded-md bg-paper/90 py-2.5 text-[14px] font-semibold text-ink opacity-0 shadow-sm backdrop-blur transition duration-200 hover:bg-pine hover:text-white focus-visible:translate-y-0 focus-visible:opacity-100 group-hover:translate-y-0 group-hover:opacity-100"
+      class="absolute inset-x-3 bottom-3 translate-y-2 rounded-md bg-paper/90 py-2.5 text-[14px] font-semibold text-ink opacity-0 shadow-sm backdrop-blur transition duration-200 hover:bg-brand hover:text-white focus-visible:translate-y-0 focus-visible:opacity-100 group-hover:translate-y-0 group-hover:opacity-100"
       aria-label={T.ariaAdd(product.title)}
     >
       {T.addToCart}
     </button>
   </div>
   <div class="flex flex-col items-center justify-center gap-2 px-4 py-3">
-    <h3 class="truncate text-[15px] font-medium group-hover:underline group-hover:underline-offset-4">{product.title}</h3>
-    <p class="text-[18px] text-muted">
+    <h3 class="truncate font-display text-[17px] group-hover:underline group-hover:underline-offset-4">{product.title}</h3>
+    <p class="text-[15px] tracking-wide text-muted">
       {onSale && <s class="mr-1.5 text-[13px]">${product.compareAtPrice!.amount}</s>}
-      <span class:list={[onSale && 'font-semibold text-pine']}>${product.price.amount}</span>
+      <span class:list={[onSale && 'font-semibold text-brand']}>${product.price.amount}</span>
     </p>
   </div>
 </a>

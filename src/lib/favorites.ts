@@ -3,7 +3,7 @@
  */
 import { persistentAtom } from '@nanostores/persistent';
 
-export const favorites = persistentAtom<string[]>('njx-shop-favs', [], {
+export const favorites = persistentAtom<string[]>('njx-boutique-favs', [], {
   encode: JSON.stringify,
   decode: JSON.parse,
 });

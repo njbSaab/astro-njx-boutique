@@ -13,7 +13,7 @@ import { CONTACTS as T } from '../constants/pages';
     <div class="space-y-4">
       <div class="rounded-2xl border border-line bg-tile/60 p-6">
         <h2 class="text-[15px] font-semibold">{T.cards.email.title}</h2>
-        <a href={`mailto:${T.cards.email.address}`} class="mt-1 block text-[15px] text-pine underline underline-offset-2">{T.cards.email.address}</a>
+        <a href={`mailto:${T.cards.email.address}`} class="mt-1 block text-[15px] text-brand underline underline-offset-2">{T.cards.email.address}</a>
         <p class="mt-2 text-[13px] text-muted">{T.cards.email.note}</p>
       </div>
       <div class="rounded-2xl border border-line bg-tile/60 p-6">
@@ -41,23 +41,23 @@ import { CONTACTS as T } from '../constants/pages';
         <label class="block">
           <span class="text-[13px] font-medium">{T.form.nameLabel}</span>
           <input type="text" name="name" required placeholder={T.form.namePlaceholder}
-            class="mt-1.5 w-full rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-pine" />
+            class="mt-1.5 w-full rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-brand" />
         </label>
         <label class="block">
           <span class="text-[13px] font-medium">{T.form.emailLabel}</span>
           <input type="email" name="email" required placeholder={T.form.emailPlaceholder}
-            class="mt-1.5 w-full rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-pine" />
+            class="mt-1.5 w-full rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-brand" />
         </label>
       </div>
       <label class="mt-4 block">
         <span class="text-[13px] font-medium">{T.form.messageLabel}</span>
         <textarea name="message" rows="6" required placeholder={T.form.messagePlaceholder}
-          class="mt-1.5 w-full resize-y rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-pine"></textarea>
+          class="mt-1.5 w-full resize-y rounded-md border border-line bg-paper px-3.5 py-3 text-[15px] outline-none placeholder:text-muted focus:border-brand"></textarea>
       </label>
-      <button type="submit" class="mt-5 w-full rounded-md bg-pine py-3.5 text-[15px] font-semibold text-white hover:bg-pine-deep sm:w-auto sm:px-8">
+      <button type="submit" class="mt-5 w-full rounded-md bg-brand py-3.5 text-[15px] font-semibold text-white hover:bg-brand-deep sm:w-auto sm:px-8">
         {T.form.submitLabel}
       </button>
-      <p data-contact-note class="mt-4 hidden rounded-md bg-pine-soft px-4 py-3 text-[13px] leading-relaxed"></p>
+      <p data-contact-note class="mt-4 hidden rounded-md bg-brand-soft px-4 py-3 text-[13px] leading-relaxed"></p>
     </form>
   </section>
 
