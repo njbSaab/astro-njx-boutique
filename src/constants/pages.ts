@@ -70,6 +70,7 @@ export const HOME = {
     text: 'Everything you just tried — bag, search, favorites, dark mode, checkout — is astro-njx-boutique, a static storefront you can fork today. Point one env var at your Shopify store and these same pages rebuild from your real catalog, hosted checkout included.',
     ctaPrimary: { label: 'Get the theme on GitHub', href: SITE.repoUrl },
     ctaSecondary: { label: 'How it works', href: '/about#theme' },
+    ctaThemes: { label: 'All themes & Pro', href: SITE.themesUrl },
     stack: [
       { strong: 'Astro 5 + Tailwind v4', text: '— 20 static pages, zero client framework' },
       { strong: 'Node.js build', text: '— data layer runs at build time, ships pure HTML' },
