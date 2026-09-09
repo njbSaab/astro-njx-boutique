@@ -1,5 +1,7 @@
 # astro-njx-boutique — editorial fashion theme for Astro
 
+> Part of **[njX Astro Themes](https://njxui.dev/themes)** — ecommerce storefronts & landing pages by one author, free today, Pro versions on the way.
+
 A complete boutique storefront built with **Astro 5 + Tailwind CSS v4**: serif editorial
 typography, full-bleed imagery, oxblood accents — wired for **Shopify** out of the box and
 deployable to **Cloudflare Pages** (or any static host) in minutes.
