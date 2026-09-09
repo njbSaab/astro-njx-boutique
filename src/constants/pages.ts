@@ -8,6 +8,11 @@ export const HOME = {
   meta: {
     // empty = defaults from SITE (Layout fills them in)
   },
+  themeBar: {
+    text: 'This boutique is a free Astro theme.',
+    cta: { label: 'Get it on GitHub', href: SITE.repoUrl },
+    cta2: { label: 'All themes & Pro', href: SITE.themesUrl },
+  },
   heroSlides: [
     {
       title: 'Clothes for slow seasons.',
